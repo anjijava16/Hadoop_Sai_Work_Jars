@@ -202,8 +202,6 @@
 	<classpathentry kind="lib" path="hbase_lib/netty-3.2.4.Final.jar"/>
 	<classpathentry kind="lib" path="hbase_lib/netty-all-4.0.23.Final.jar"/>
 	<classpathentry kind="lib" path="hbase_lib/paranamer-2.3.jar"/>
-	<classpathentry kind="lib" path="hbase_lib/phoenix-4.6.0-HBase-1.1-client.jar"/>
-	<classpathentry kind="lib" path="hbase_lib/phoenix-4.6.0-HBase-1.1-server.jar"/>
 	<classpathentry kind="lib" path="hbase_lib/protobuf-java-2.5.0.jar"/>
 	<classpathentry kind="lib" path="hbase_lib/servlet-api-2.5-6.1.14.jar"/>
 	<classpathentry kind="lib" path="hbase_lib/servlet-api-2.5.jar"/>
@@ -359,7 +357,6 @@
 	<classpathentry kind="lib" path="pig_lib/trevni-avro-1.7.5.jar"/>
 	<classpathentry kind="lib" path="pig_lib/trevni-core-1.7.5.jar"/>
 	<classpathentry kind="lib" path="pig_lib/zookeeper-3.4.5.jar"/>
-	<classpathentry kind="lib" path="phonex_lib/squirrel-sql-3.6-standard.jar"/>
 	<classpathentry kind="lib" path="external_lib/itextpdf-5.4.1.jar"/>
 	<classpathentry kind="lib" path="external_lib/mongo-hadoop-core-1.3.0.jar"/>
 	<classpathentry kind="lib" path="external_lib/mongo-java-driver-3.0.2.jar"/>
