@@ -1,0 +1,35 @@
+=================================================================================================================
+=================================================================================================================
+
+CREATE TABLE IF NOT EXISTS loanfull( applicantname string , loanid string, gender string, age string, maitalstatus string,state string , country string,loantype string, loanstatus string, loanamount string, term string, income string, interestrate string, installment string, credithistorystatus string, numberofdependents string, applicationtype string ) 
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE
+;
+
+
+LOAD DATA LOCAL INPATH  '/home/hadoop/work/POC@Work/POC2/loandataset.csv' INTO TABLE loanfull
+
+
+
+set hive.exec.dynamic.partition.mode=nonstrict
+
+ CREATE TABLE IF NOT EXISTS loan_partition (
+applicantname string , loanid string, gender string,
+ age string, maitalstatus string,loantype string,
+ loanamount string, term string, income string,
+interestrate string, installment string, credithistorystatus string,
+ numberofdependents string, applicationtype string )
+PARTITIONED BY ( country string , states string, loan_status string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE
+;
+
+
+INSERT OVERWRITE TABLE loan_partition PARTITION(country,states,loan_status) select * from loanfull;
+
+=================================================================================================================
+=================================================================================================================
